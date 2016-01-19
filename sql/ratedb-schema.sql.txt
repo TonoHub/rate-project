@@ -1,0 +1,68 @@
+drop database if exists ratedb;
+create database ratedb;
+
+use ratedb;
+
+CREATE TABLE users (
+    id BINARY(16) NOT NULL,
+    loginid VARCHAR(16) NOT NULL UNIQUE,
+    password BINARY(16) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE user_roles (
+    userid BINARY(16) NOT NULL,
+    role ENUM ('registered'),
+    FOREIGN KEY (userid) REFERENCES users(id) on delete cascade,
+    PRIMARY KEY (userid, role)
+);
+
+CREATE TABLE auth_tokens (
+    userid BINARY(16) NOT NULL,
+    token BINARY(16) NOT NULL,
+    FOREIGN KEY (userid) REFERENCES users(id) on delete cascade,
+    PRIMARY KEY (token)
+);
+
+CREATE TABLE game (
+    id BINARY(16) NOT NULL,
+    name VARCHAR (50) NOT NULL,
+    genre VARCHAR (50) NOT NULL,
+    score INTEGER DEFAULT 0,
+    year INTEGER NOT NULL,
+    last_modified TIMESTAMP NOT NULL,
+    creation_timestamp DATETIME not null default current_timestamp,
+
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE score(
+userid BINARY(16) NOT NULL,
+gameid BINARY(16) NOT NULL,
+gamescore INTEGER,
+FOREIGN KEY (gameid) REFERENCES game(id) on delete cascade,
+FOREIGN KEY (userid) REFERENCES users(id),
+PRIMARY KEY (gameid, userid)
+);
+
+CREATE TABLE review (
+    id BINARY(16) NOT NULL,
+    userid BINARY(16) NOT NULL,
+    gameid BINARY(16) NOT NULL,
+    content VARCHAR(500) NOT NULL,
+    last_modified TIMESTAMP NOT NULL,
+    creation_timestamp DATETIME not null default current_timestamp,
+    FOREIGN KEY (userid) REFERENCES users(id),
+    FOREIGN KEY (gameid) REFERENCES game(id) on delete cascade,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE likes (
+userid BINARY(16) NOT NULL,
+reviewid BINARY(16) NOT NULL,
+likes BOOLEAN, 
+FOREIGN KEY (userid) REFERENCES users(id),
+FOREIGN KEY (reviewid) REFERENCES review(id) on delete cascade,
+PRIMARY KEY (userid, reviewid)
+);

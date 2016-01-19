@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="edu.upc.eetac.dsa.rate.GameDetailActivity">
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textViewGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textViewCreation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Review the Game" />
+
+    <Button
+        android:id="@+id/btScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Score the Game" />
+
+    <Button
+        android:id="@+id/btRevList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List the reviews" />
+
+</LinearLayout>

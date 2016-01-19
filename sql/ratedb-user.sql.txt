@@ -1,0 +1,4 @@
+drop user 'rate'@'localhost';
+create user 'rate'@'localhost' identified by 'rate';
+grant all privileges on ratedb.* to 'rate'@'localhost';
+flush privileges;

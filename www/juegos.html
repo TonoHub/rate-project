@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>GameRate</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="color:#bdff01" href="index.html">GameRate</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a style="color:#bdff01" href="index.html">Portada</a></li>
+                    <li><a style="color:#bdff01" href="juegos.html">Juegos</a></li>
+                    <li><a style="color:#bdff01" href="categorias.html">Categorias</a></li>
+					<li><a style="color:#bdff01" href="administradores.html">Administradores</a></li>
+                    <li><a style="color:#bdff01" href="ayuda.html">Ayuda</a></li>
+					<li><a span id="login_info"></span></a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('img/portada3.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1 style="color:#bdff01">Juegos</h1>
+                        <hr class="small">
+                        <span style="color:#bdff01" class="subheading">Ayúdate de los diferentes filtros para buscar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+	<div class="container">
+	<div class="jumbotron">
+	<div class="row"> <div class="col-sm-5" ><h3>Busqueda por nombre:<h3></div><div class="col-sm-5" ><h3>Filtros:<h3></div></div>
+		
+		
+		<div class="row"> <div class="col-sm-5" >
+			<li><input type="text" id="juego_nombre" placeholder="Search..."> 
+              <button class="btn btn-default" type="button"  id="button_get2"><span class="glyphicon glyphicon-search"></span></button>                           
+			</li>    
+		</div>		
+		
+    
+    <div class="btn-group">
+      <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+       Juegos <span class="caret"></span></button>
+      <ul class="dropdown-menu" role="menu">
+        <li><text>25197A6BBDEE11E5B0D800155D077819</a></li>
+        <li><text>F46C7598BEA411E5B0D800155D077819</a></li>
+		<li><text>AE9DAB37BEA411E5B0D800155D077819</a></li>
+		<li><text>90B84130BEA411E5B0D800155D077819</a></li>
+		<li><text>EA4518F1BEA311E5B0D800155D077819</a></li>
+        <li><text>09136F5FBEA211E5B0D800155D077819</a></li>
+		<li><text>6948370EBDEE11E5B0D800155D077819</a></li>
+		<li><span id="create_game"></span></li>
+      </ul>
+    </div>  
+	<div class="btn-group">
+      <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+       Comentarios <span class="caret"></span></button>
+      <ul class="dropdown-menu" role="menu">
+        <li><text>A992E3CFBE1A11E5B0D800155D077819</text></li>
+        <li><text>202D8040BE6211E5B0D800155D077819</text></li>	
+		<li><text>FE9A3ACBBE2311E5B0D800155D077819</text></li>
+        <li><text>8A8178EFBE3011E5B0D800155D077819</text></li>	
+		<li><text>0BD74C6DBE2711E5B0D800155D077819</text></li>
+        <li><text>202D8040BE6211E5B0D800155D077819</text></li>	
+      </ul>
+    </div> 
+
+		
+	</div>
+	
+</div>
+<div class="text-center">
+	<input type="text" placeholder="score" id="score">
+	<button type="button" id="button_crear_score2">Puntua</button>
+	<input type="text" placeholder="Idcomentario" id="comentar">
+	<button type="button"  id="button_get_rev">Mostrar comentario</button>
+	<!-- <button type="button"  id="button_get_comentarios">Mostrar comentario2</button>-->
+	<div class="text-right"> <span id="score"></span></div>
+</div>	
+<span id="result"></span>
+<span id="coment"></span>
+<span id="comentarios"></span>
+<p><p>
+<div class="text-right"><button type="button"  id="button_crear_like">Me gusta</button><button type="button"  id="button_crear_dislike">No me gusta</button></span></div>
+<div class="form-group">  
+<div class="row control-group">
+<div class="form-group col-xs-12 floating-label-form-group controls">
+<label>Mensaje</label>
+<textarea rows="5" class="form-control" placeholder="Mensaje" id="content" required data-validation-required-message="Introduce un mensaje."></textarea>
+<p class="help-block text-danger"></p>
+</div>'
+</div>
+<br>
+<div id="success"></div>
+<div class="row">
+<div class="form-group col-xs-12">
+<button type="submit" class="btn btn-default" id ="button_crear_comentario">Enviar</button>
+</div>
+</div>
+</div>
+
+<div class="page-header"> </div>
+  <h3>Crear Juego:<h3>
+  <input type="text" placeholder="nombre" id="nombrejuego">
+  <input type="text" placeholder="año" id="añojuego">
+  <input type="text" placeholder="categoria" id="categoriajuego"> 
+  <button type="button"  id="button_crear_juego">Crear juego</button>
+  
+<div class="page-header"> </div>
+</div>
+  
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+	
+	<!-- Event and AJAX functions -->
+	<script type="text/javascript" src="gamerate.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>	
+	<script src="js/weblinking.js"></script>
+	
+</body>
+
+</html>
