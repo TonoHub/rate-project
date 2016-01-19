@@ -3,6 +3,7 @@ package edu.upc.eetac.dsa.rate;
 import org.glassfish.jersey.linking.DeclarativeLinkingFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.filter.RolesAllowedDynamicFeature;
+import org.glassfish.jersey.jackson.JacksonFeature;
 
 /**
  * Created by tono on 05/10/2015.
