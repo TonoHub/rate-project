@@ -19,7 +19,16 @@ public class Database {
     private DataSource ds;
 
     private Database() {
-        HikariConfig config = new HikariConfig(Database.class.getClassLoader().getResource("hikari.properties").getFile());
+        PropertyResourceBundle prb = (PropertyResourceBundle) ResourceBundle.getBundle("hikari");
+        Enumeration<String> keys = prb.getKeys();
+        Properties properties = new Properties();
+        while(keys.hasMoreElements()){
+            String key = keys.nextElement();
+            properties.setProperty(key, prb.getString(key));
+        }
+
+        //HikariConfig config = new HikariConfig(Database.class.getClassLoader().getResource("hikari.properties").getFile());
+        HikariConfig config = new HikariConfig(properties);
         ds = new HikariDataSource(config);
     }
 

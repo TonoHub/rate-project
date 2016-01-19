@@ -14,5 +14,6 @@ public class RateResourceConfig extends ResourceConfig {
         packages("edu.upc.eetac.dsa.rate.cors");
         register(RolesAllowedDynamicFeature.class);
         register(DeclarativeLinkingFeature.class);
+        register(JacksonFeature.class);
     }
 }
